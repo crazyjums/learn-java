@@ -6,6 +6,8 @@ import com.multidatasource.domain.po.Student;
 public interface StudentService {
 
 
-    Student getOneById(Integer id);
+    Student getOneByIdFromMaster(Integer id);
+
+    Student getOneByIdFromSlave(Integer id);
 
 }

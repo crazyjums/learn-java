@@ -14,7 +14,7 @@ import java.util.Map;
 @Primary
 public class DynamicDataSource extends AbstractRoutingDataSource {
 
-    public static ThreadLocal<DBType> currDataSourceContext = new ThreadLocal<>();
+    public static ThreadLocal<DBType> targetDataSourceContext = new ThreadLocal<>();
 
     @Resource
     DataSource masterDataSource;
@@ -39,6 +39,6 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
     @Override
     protected Object determineCurrentLookupKey() {
         //设置默认的数据源
-        return currDataSourceContext.get();
+        return targetDataSourceContext.get();
     }
 }

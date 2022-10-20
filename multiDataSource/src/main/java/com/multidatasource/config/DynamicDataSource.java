@@ -25,7 +25,6 @@ public class DynamicDataSource implements DataSource, InitializingBean {
     @Resource
     DataSource slaveDataSource;
 
-
     @Override
     public Connection getConnection() throws SQLException {
         if (DBType.MASTER.equals(currDataSource.get())) {
