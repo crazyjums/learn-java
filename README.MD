@@ -4,7 +4,7 @@
 2. [springboot+mybatis配置多数据源，用AbstractRoutingDataSource显示控制](https://github.com/crazyjums/learn-java/tree/master/multiDataSourceAbstractRouting)
 3. [springboot+mybatis配置多数据源，用AOP实现注解显示切换数据源](https://github.com/crazyjums/learn-java/tree/master/multiDataSourceAop)
 
-## 第1和2种方式的用发
+## 第1和2种方式的用法
 
 在service层调用：
 
