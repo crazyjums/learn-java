@@ -1,6 +1,6 @@
 package com.multidatasourceaop.service.impl;
 
-import com.multidatasourceaop.annotaion.TargetDataSource;
+import com.multidatasourceaop.annotaion.TargetDataSourceSelector;
 import com.multidatasourceaop.config.DynamicDataSource;
 import com.multidatasourceaop.domain.po.Student;
 import com.multidatasourceaop.enums.DBType;
@@ -16,7 +16,7 @@ public class StudentServiceImpl implements StudentService {
     @Resource
     StudentMapper studentMapper;
 
-    @TargetDataSource(targetDB = DBType.MASTER)
+    @TargetDataSourceSelector(targetDB = DBType.MASTER)
     @Override
     public Student getOneByIdFromMaster(Integer id) {
         try {
@@ -31,7 +31,7 @@ public class StudentServiceImpl implements StudentService {
         return null;
     }
 
-    @TargetDataSource(targetDB = DBType.SLAVE)
+    @TargetDataSourceSelector(targetDB = DBType.SLAVE)
     @Override
     public Student getOneByIdFromSlave(Integer id) {
         try {

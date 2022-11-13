@@ -41,4 +41,20 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
         //设置默认的数据源
         return targetDataSourceContext.get();
     }
+
+    /**
+     * 设置当前上下文环境中的数据源
+     *
+     * @param dbType dbType
+     */
+    public static void setTargetDataSourceContext(DBType dbType) {
+        targetDataSourceContext.set(dbType);
+    }
+
+    /**
+     * 清空当前上下文中的数据源
+     */
+    public static void clearTargetDataSourceContext() {
+        targetDataSourceContext.remove();
+    }
 }

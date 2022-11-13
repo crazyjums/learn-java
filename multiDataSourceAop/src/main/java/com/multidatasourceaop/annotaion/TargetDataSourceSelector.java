@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface TargetDataSource {
+public @interface TargetDataSourceSelector {
 
     /**
      * 显示控制数据查询走主库还是从库，默认走主库
